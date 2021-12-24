@@ -1,12 +1,18 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 // short-circuit evaluation
 // ternary operator
 
 const ShortCircuit = () => {
-  // const firstValue = text || 'hello world';
-  // const secondValue = text && 'hello world';
+  const [text, setText] = useState("k");
+  const firstValue = text || "hello world";
+  const secondValue = text && "hello world";
 
-  return <h2>short circuit</h2>;
+  return (
+    <>
+      <h2>{firstValue}</h2>
+      <h2>{secondValue}</h2>
+    </>
+  );
 };
 
 export default ShortCircuit;
